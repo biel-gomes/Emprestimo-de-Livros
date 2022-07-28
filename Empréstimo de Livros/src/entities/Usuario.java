@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.Date;
 
 public class Usuario extends Perfil{
+    public static int geraId = 1;
+    
     private int id;
     private boolean situacaoCadastral;
     private List<Emprestimo> historico;
@@ -12,7 +14,8 @@ public class Usuario extends Perfil{
     public Usuario(String nome, Date dataNascimento, String cpf, String email, String telefone, String endereco){
         super(nome, dataNascimento, cpf, email, telefone, endereco);
         this.situacaoCadastral = true;
-        this.id = 1;
+        this.id = geraId;
+        geraId ++;
     }
 
     /**
