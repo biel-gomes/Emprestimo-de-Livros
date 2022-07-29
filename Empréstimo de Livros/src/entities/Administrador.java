@@ -1,11 +1,10 @@
 package entities;
 
-
-
 import java.util.Date;
 
 public class Administrador extends Perfil{
-    public static int geraId = 1; 
+    public static int geraId = 1;
+    
     private int idAdministrador;
     
     public Administrador(String nome, Date dataNascimento, String cpf, String email, String telefone, String endereco) {
@@ -14,16 +13,10 @@ public class Administrador extends Perfil{
         geraId ++;
     }
 
-    /**
-     * @return int return the idAdministrador
-     */
     public int getIdAdministrador() {
         return idAdministrador;
     }
 
-    /**
-     * @param idAdministrador the idAdministrador to set
-     */
     public void setIdAdministrador(int idAdministrador) {
         this.idAdministrador = idAdministrador;
     }

@@ -33,31 +33,18 @@ public abstract class Perfil{
 		return idade;
 	}
 
-
-    /**
-     * @return String return the nome
-     */
     public String getNome() {
         return nome;
     }
 
-    /**
-     * @param nome the nome to set
-     */
     public void setNome(String nome) {
         this.nome = nome;
     }
 
-    /**
-     * @return Date return the dataNascimento
-     */
     public Date getDataNascimento() {
         return dataNascimento;
     }
 
-    /**
-     * @param dataNascimento the dataNascimento to set
-     */
     public void setDataNascimento(Date dataNascimento) {
         this.dataNascimento = dataNascimento;
 		idade = calculaIdade(dataNascimento);
@@ -67,67 +54,35 @@ public abstract class Perfil{
 		return idade;
 	}
 
-    /**
-     * @param idade the idade to set
-     */
-    public void setIdade(int idade) {
-        this.idade = idade;
-    }
-
-    /**
-     * @return String return the cpf
-     */
     public String getCpf() {
         return cpf;
     }
 
-    /**
-     * @param cpf the cpf to set
-     */
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 
-    /**
-     * @return String return the email
-     */
     public String getEmail() {
         return email;
     }
 
-    /**
-     * @param email the email to set
-     */
     public void setEmail(String email) {
         this.email = email;
     }
 
-    /**
-     * @return String return the telefone
-     */
     public String getTelefone() {
         return telefone;
     }
 
-    /**
-     * @param telefone the telefone to set
-     */
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
 
-    /**
-     * @return String return the endereco
-     */
     public String getEndereco() {
         return endereco;
     }
 
-    /**
-     * @param endereco the endereco to set
-     */
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
-
 }
