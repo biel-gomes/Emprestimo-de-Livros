@@ -1,33 +1,31 @@
 package entities;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Cadastro {
-    private List<Usuario> usuarios;
-    private List<Administrador> funcionarios;
-    private List<Livro> livros;
-
-    public List<Usuario> getUsuarios() {
-        return usuarios;
+    private static List<Usuario> usuarios;
+    private static List<Administrador> funcionarios;
+    private static List<Livro> livros;
+    
+    public static int buscaLivro(String titulo) {
+        List<Livro> temp = livros.stream().filter(x -> x.getTitulo().equals(titulo)).collect(Collectors.toList());
+        
+        if(temp.size() > 0) {
+            return temp.get(0).getIdTitulo();
+        }
+        return -1;
     }
 
-    public void cadastrarUsuario(Usuario usuario) {
-        this.usuarios.add(usuario);
+    public static void cadastrarUsuario(Usuario usuario) {
+        usuarios.add(usuario);
     }
 
-    public List<Administrador> getFuncionarios() {
-        return funcionarios;
+    public static void cadastrarFuncionario(Administrador funcionario) {
+        funcionarios.add(funcionario);
     }
-
-    public void cadastrarFuncionario(Administrador funcionario) {
-        this.funcionarios.add(funcionario);
-    }
-
-    public List<Livro> getLivros() {
-        return livros;
-    }
-
-    public void cadastrarLivro(Livro livros) {
-        this.livros.add(livros);
+    
+    public static void cadastrarLivro(Livro livro) {
+        livros.add(livro);
     }
 }
