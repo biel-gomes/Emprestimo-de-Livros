@@ -1,13 +1,11 @@
 package entities;
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import entities.enums.Idioma;
 import entities.enums.Situacao;
 
 public class Livro {
-    public static final SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
     public static int geraIdLivro = 1;
     public static int geraIdTitulo = 1;
 
@@ -32,6 +30,7 @@ public class Livro {
         this.idTitulo = Cadastro.buscaLivro(titulo);
         if(this.idTitulo == -1) {
             this.idTitulo = geraIdTitulo;
+            geraIdTitulo ++;
         }
 
         this.titulo = titulo;
