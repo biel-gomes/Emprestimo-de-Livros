@@ -1,7 +1,6 @@
 package entities;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class Cadastro {
     private static List<Usuario> usuarios;
@@ -9,12 +8,9 @@ public class Cadastro {
     private static List<Livro> livros;
     
     public static int buscaLivro(String titulo) {
-        List<Livro> temp = livros.stream().filter(x -> x.getTitulo().equals(titulo)).collect(Collectors.toList());
-        
-        if(temp.size() > 0) {
-            return temp.get(0).getIdTitulo();
-        }
-        return -1;
+        Integer temp = livros.stream().filter(x -> x.getTitulo().equals(titulo)).findFirst().orElse(null).getIdTitulo();
+
+        return (temp == null) ? -1 : temp;
     }
 
     public static void cadastrarUsuario(Usuario usuario) {
