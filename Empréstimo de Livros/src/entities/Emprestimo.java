@@ -4,9 +4,10 @@ import java.util.Date;
 
 public class Emprestimo {
     private int idEmprestimo;
-    private Usuario usuario;
-    private Livro livro;
+    private int idUsuario;
+    private int idLivro;
     private Date dataRetirada;
+    private Date dataReservada;
     private Date devolucaoPrevista;
     private Date devolucaoReal;
 
@@ -27,29 +28,29 @@ public class Emprestimo {
     /**
      * @return Usuario return the usuario
      */
-    public Usuario getUsuario() {
-        return usuario;
+    public int getIdUsuario() {
+        return idUsuario;
     }
 
     /**
      * @param usuario the usuario to set
      */
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
+    public void setIdUsuario(int idUsuario) {
+        this.idUsuario = idUsuario;
     }
 
     /**
      * @return Livro return the livro
      */
-    public Livro getLivro() {
-        return livro;
+    public int getLivro() {
+        return idLivro;
     }
 
     /**
      * @param livro the livro to set
      */
-    public void setLivro(Livro livro) {
-        this.livro = livro;
+    public void setIdLivro(int idLivro) {
+        this.idLivro = idLivro;
     }
 
     /**
@@ -64,6 +65,20 @@ public class Emprestimo {
      */
     public void setDataRetirada(Date dataRetirada) {
         this.dataRetirada = dataRetirada;
+    }
+
+    /**
+     * @return Date return the dataReservada
+     */
+    public Date getDataReservada() {
+        return dataReservada;
+    }
+
+    /**
+     * @param dataRetirada the dataReservada to set
+     */
+    public void setDataReservada(Date dataReservada) {
+        this.dataReservada = dataReservada;
     }
 
     /**

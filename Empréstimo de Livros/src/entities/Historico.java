@@ -1,12 +1,15 @@
 package entities;
 
+import java.util.List;
+
+
 public class Historico {
-    private Emprestimo emprestimos;
+    private List<Emprestimo> emprestimos;
 
     /**
      * @return Emprestimo return the emprestimos
      */
-    public Emprestimo getEmprestimos() {
+    public List<Emprestimo> getEmprestimos() {
         return emprestimos;
     }
 
@@ -14,7 +17,7 @@ public class Historico {
      * @param emprestimos the emprestimos to set
      */
     public void setEmprestimos(Emprestimo emprestimos) {
-        this.emprestimos = emprestimos;
+        this.emprestimos.add(emprestimos);
     }
 
 }
